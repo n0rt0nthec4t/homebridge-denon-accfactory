@@ -1,0 +1,42 @@
+{
+    "pluginAlias": "DenonAccfactory",
+    "pluginType": "platform",
+    "singular": true,
+    "schema": {
+        "type": "object",
+        "properties": {
+            "devices" : {
+                "type" : "array",
+                "expandable": true,
+                "expanded": true,
+                "condition": {
+                    "functionBody": "return model.options.autoDiscover === false"
+                },
+                "items": {
+                    "type" : "object",
+                    "properties" : {
+                        "system": {
+                            "type": "string",
+                            "required": true,
+                            "placeholder": "IP address or hostname for Denon system"
+                        }
+                    }
+                }
+            },
+            "options": {
+                "title": "Options",
+                "type": "object",
+                "expandable": true,
+                "expanded": true,
+                "properties": {
+                    "autoDiscover": {
+                        "title": "Auto Discover",
+                        "description": "Automatically discover devices on local network",
+                        "type": "boolean",
+                        "default": true
+                    }
+                }
+            }
+        }
+    }
+}

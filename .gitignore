@@ -1,0 +1,10 @@
+persist
+node_modules
+dist*
+.vscode
+.DS_Store
+.git
+*.code-workspace
+*.opus
+*.aac
+*.mp4
